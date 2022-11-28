@@ -1,0 +1,120 @@
+POWERSHELL
+
+PS C:\Users\bence\OneDrive\Asztali gép\Suli\2. év\laravel_nodejs_react\web\html\2022_11_28-galeria> npx create-react-app galeria
+npx : The term 'npx' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the p 
+ath is correct and try again.
+At line:1 char:1
++ npx create-react-app galeria
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (npx:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\bence\OneDrive\Asztali gép\Suli\2. év\laravel_nodejs_react\web\html\2022_11_28-galeria>
+
+DOCKER
+
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\bence\OneDrive\Asztali gép\Suli\2. év\laravel_nodejs_react\web\html\2022_11_28-galeria> docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED      STATUS          PORTS                                                    NAMES       
+58537be3e7f7   laravel_nodejs_react-php-apache-environment2   "docker-php-entrypoi…"   5 days ago   Up 14 minutes   0.0.0.0:3000->3000/tcp, 80/tcp, 0.0.0.0:8000->8000/tcp   php-apache2 
+6068fdd28437   phpmyadmin/phpmyadmin                          "/docker-entrypoint.…"   5 days ago   Up 14 minutes   0.0.0.0:8080->80/tcp                                     laravel_nodejs_react-phpmyadmin2-1
+df47586fa408   mysql                                          "docker-entrypoint.s…"   5 days ago   Up 14 minutes   33060/tcp, 0.0.0.0:9906->3306/tcp                        db2
+PS C:\Users\bence\OneDrive\Asztali gép\Suli\2. év\laravel_nodejs_react\web\html\2022_11_28-galeria> docker exec -it 58537be3e7f7 /bin/bash
+root@58537be3e7f7:/var/www/html# npx create-react-app galeria
+Cannot create a project named "gal�eria" because of npm naming restrictions:
+
+  * name can only contain URL-friendly characters
+
+Please choose a different project name.
+root@58537be3e7f7:/var/www/html# npx create-react-app galeria                                                                                                                            
+The directory galeria contains files that could conflict:
+
+  node_modules/
+  package-lock.json
+  package.json
+  public/
+  src/
+
+Either try using a new directory name, or remove the files listed above.
+root@58537be3e7f7:/var/www/html# npx create-react-app galery                                                                                                                             
+
+Creating a new React app in /var/www/html/galery.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+
+
+added 1394 packages in 2m
+
+213 packages are looking for funding
+  run `npm fund` for details
+
+Initialized a git repository.
+
+Installing template dependencies using npm...
+
+added 72 packages in 15s
+
+226 packages are looking for funding
+  run `npm fund` for details
+Removing template package using npm...
+
+
+removed 1 package, and audited 1466 packages in 4s
+
+226 packages are looking for funding
+  run `npm fund` for details
+
+6 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Git commit not created Error: Command failed: git commit -m "Initialize project using Create React App"
+    at checkExecSyncError (node:child_process:861:11)
+    at execSync (node:child_process:932:15)
+    at tryGitCommit (/var/www/html/galery/node_modules/react-scripts/scripts/init.js:62:5)
+    at module.exports (/var/www/html/galery/node_modules/react-scripts/scripts/init.js:350:25)
+    at [eval]:3:14
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:313:38)
+    at node:internal/process/execution:79:19
+    at [eval]-wrapper:6:22 {
+  status: 128,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 367,
+  stdout: null,
+  stderr: null
+}
+Removing .git directory...
+
+Success! Created galery at /var/www/html/galery
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd galery
+  npm start
+
+Happy hacking!
+root@58537be3e7f7:/var/www/html#
